@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+
+import '../StyleSheet/ViewScreen.scss'
 class ViewScreen extends Component {
     render() {
         return (
-            <div>
+            <div className='view-screen'>
                 View Screen
             </div>
         )
