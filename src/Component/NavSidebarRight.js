@@ -118,7 +118,7 @@ class NavSidebarRight extends Component {
                 <ul className='nav-right-content-social'>
                     <li>
                         <p>biggeset fans</p>
-                        <ul>
+                        <ul className='underline'>
                             <li>
                                <div className='cols'>
                                     <div className='col is-4'>

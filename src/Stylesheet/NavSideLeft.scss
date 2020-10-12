@@ -18,10 +18,11 @@
 .main-nav-left {
   overflow-x: hidden;
   overflow-y: auto;
-  position: absolute;
+  position: fixed;
   top: 45px;
-  height: calc(100% - 45px);
+  height: 100%;
   left: 0;
+  bottom: 0px;
   width: 220px;
   background-color: #2c3144;
   ul {

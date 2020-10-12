@@ -12,8 +12,11 @@ class MainScreen extends Component {
         return(
             <div className='app-main'>
                 {/* main */}
-                <ViewScreen />
-                <MainContent />
+                <div className='app-content'>
+                    <ViewScreen />
+                    <MainContent />
+                </div>
+                
 
                 {/* extension */}
                 <Navbars />
