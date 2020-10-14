@@ -8,8 +8,9 @@ class MainContent extends Component{
             count_card : 20
         }
     }
-    onClickType = (e) =>{
-        console.log(e)
+    onClickContent = () =>{
+        $('.body-content').toggleClass('hide-content')
+        $('.icon-content').toggleClass('show-content')
     }
     componentDidMount() {
         $('.category li').on('click', function(){
@@ -101,9 +102,9 @@ class MainContent extends Component{
     render() {
         return (
             <div className='main-content'>
-               <div className='heading-content'> 
-                   <p>
-                       <i className= 'fas fa-caret-down'></i>
+               <div className='heading-content' > 
+                   <p onClick={() => this.onClickContent()}>
+                       <i className= 'fas fa-caret-down icon-content'></i>
                         portfolio
                    </p>
                    <ul className='category'>

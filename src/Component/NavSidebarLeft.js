@@ -19,42 +19,43 @@ class NavSidebarLeft extends Component{
     render(){
         return(
             <div className='main-nav-left'>
-                <ul className='nav-content-left'>
-                   <li>
-                        <i className='las la-file-alt'></i>
+                <div className='m-color'>
+                    <ul className='nav-content-left'>
+                    <li>
+                            <i className='las la-file-alt'></i>
+                            <a>
+                            Custom Reports
+                            </a>
+                    </li>
+                    <li className=''>
+                            <i className='las la-chart-area'></i>
+                            <a>
+                            Dasboard
+                            </a>
+                    </li>
+                    <li>
+                        <i className='las la-user-alt'></i>
                         <a>
-                           Custom Reports
+                            User Activity
                         </a>
-                   </li>
-                   <li className='active'>
-                        <i className='las la-chart-area'></i>
+                    </li>
+                    <li className='notification-box'>
+                        <i className='las la-comment'></i>
                         <a>
-                           Dasboard
+                            Shares
                         </a>
-                   </li>
-                   <li>
-                       <i className='las la-user-alt'></i>
-                       <a>
-                           User Activity
-                       </a>
-                   </li>
-                   <li className='notification-box'>
-                       <i className='las la-comment'></i>
-                       <a>
-                           Shares
-                       </a>
-                       <div className='notification'>
-                            <p>27</p>
-                       </div>
-                   </li>
-                   <li>
-                       <i className='las la-arrow-down'></i>
-                       <a>
-                           Dowloads
-                       </a>
-                   </li>
-               </ul>
-                <div className='status'>
+                        <div className='notification'>
+                                <p>27</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i className='las la-arrow-down'></i>
+                        <a>
+                            Dowloads
+                        </a>
+                    </li>
+                </ul>
+                    <div className='status'>
                     <div className='status-box'>
                         <div className='process color-1'>
                             <p>4k</p>
@@ -72,7 +73,9 @@ class NavSidebarLeft extends Component{
                         </p>
                     </div>
                 </div>
-                <ul className='nav-content-left-list'>
+                </div>
+                <div className='h-color'>
+                    <ul className='nav-content-left-list'>
                     <li>
                         <div className='content'>
                             <p>my account</p>
@@ -223,6 +226,7 @@ class NavSidebarLeft extends Component{
                         </ul>
                     </li>
                 </ul>
+                </div>
             </div>
         )
     }
