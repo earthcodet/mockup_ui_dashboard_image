@@ -28,15 +28,17 @@
   bottom: 0px;
   width: 220px;
   // background-color: rgba(44, 49, 68, 1);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 405px, #2c3144 20%); /* Standard syntax (must be last) */
   ul{
     padding-inline-start: 0;
     margin-block-start: 0;
     margin-block-end: 0;
   }
   div{
+    
     &.m-color{
       width: 100%;
-      height: 43.7%;
+      // height: 43.7%;
       background-color: rgba(42,64,101,.59);
       ul {
         &.nav-content-left {
@@ -119,7 +121,7 @@
       }
     }
     &.h-color{
-      height: 56.3%;
+      height: auto;
       width: 100%;
       background-color: rgba(44, 49, 68, 1);
       ul{
@@ -129,7 +131,7 @@
           
           height: auto;
           li {
-            
+            position: relative;
             margin: 2px 0;
             div {
               &.content {

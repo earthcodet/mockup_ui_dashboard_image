@@ -100,15 +100,23 @@ class NavSidebarRight extends Component {
                    <li>
                         <p>top locations</p>
                         <ReactEcharts option={this.getOption(1)} className='box-chart' />
-                       
+                        <div className='content-box right'>
+                            <i className='fas fa-caret-right'></i>  
+                        </div>
                    </li>
                    <li>
                         <p>ec2 usage</p>
                         <ReactEcharts option={this.getOption(1)} className='box-chart' />
+                        <div className='content-box right'>
+                            <i className='fas fa-caret-right'></i>  
+                        </div>
                    </li>
                    <li>
                         <p>monthly trend</p>
                         <ReactEcharts option={this.getOption(2)} className='box-chart' />
+                        <div className='content-box right'>
+                            <i className='fas fa-caret-right'></i>  
+                        </div>
                    </li>
                    <li>
                         <p>View More</p>
