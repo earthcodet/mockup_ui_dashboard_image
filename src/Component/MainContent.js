@@ -109,18 +109,38 @@ class MainContent extends Component{
                    <ul className='category'>
                        <li>
                             <p>Date</p>
+                            <div>
+                                Sort by date
+                                <img src='https://i.ibb.co/4ShDL3L/Blank-diagram-1.png'></img>
+                            </div>
                        </li>
                        <li>
                             <p>Likes</p>
+                            <div>
+                                Sort by likes
+                                <img src='https://i.ibb.co/4ShDL3L/Blank-diagram-1.png'></img>
+                            </div>
                        </li>
                        <li className='active'>
                             <p>Views</p>
+                            <div>
+                                Sort by views
+                                <img src='https://i.ibb.co/4ShDL3L/Blank-diagram-1.png'></img>
+                            </div>
                        </li>
                        <li>
                             <p>Comments</p>
+                            <div>
+                                Sort by comments
+                                <img src='https://i.ibb.co/4ShDL3L/Blank-diagram-1.png'></img>
+                            </div>
                        </li >
                        <li>
                             <p>Shared</p>
+                            <div>
+                                Sort by shared
+                                <img src='https://i.ibb.co/4ShDL3L/Blank-diagram-1.png'></img>
+                            </div>
                        </li>
                    </ul>
                </div>

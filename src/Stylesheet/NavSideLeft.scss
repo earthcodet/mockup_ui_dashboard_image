@@ -24,7 +24,9 @@
   left: 0;
   bottom: 0px;
   width: 220px;
-  background-color: #2c3144;
+  // background-color: #2c3144;
+  
+  background-color: rgba(44, 49, 68, 1);
   ul {
     padding-inline-start: 0;
     margin-block-start: 0;
@@ -41,6 +43,8 @@
 
         &:nth-child(1) {
           background-color: #2c4267;
+          background-color: 	transparent ;
+          background-color: 	transparent ;
         }
         &:nth-child(2) {
           background-color: #2e4771;
@@ -50,6 +54,8 @@
         }
         &:nth-child(4) {
           background-color: #2e446b;
+          background-color: 	transparent ;
+    background-color: 	transparent ;
         }
         &.active {
           background-color: #2d4f7c;
