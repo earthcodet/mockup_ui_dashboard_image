@@ -21,6 +21,7 @@
 }
 
 .main-content {
+  // max-width:2000px ;
   height: 100%;
   margin: 0 240px 0 220px;
   padding: 0 0 230px 0;
@@ -178,9 +179,12 @@
                   margin-right: 5px;
                   vertical-align: middle;
                   color: #d9e7f0;
+                  opacity: .95;
                   &:hover {
                     cursor: pointer;
                     color: #fb5352;
+                    opacity: 1;
+                    transition: all .2s;
                   }
                   &.color-full {
                     color: #fb5352;
@@ -188,6 +192,8 @@
                   }
                 }
                 p {
+                  margin-block-start: initial;
+                  margin-block-end: initial;
                   width: auto;
                   font-size: 17px;
                   font-weight: 500;
@@ -279,25 +285,30 @@
                           border-bottom-left-radius: 8px;
                           border-bottom-right-radius: 8px;
                         }
-
                         &.active {
                           background-size: 100%;
                           transition: background 0s;
                           background-color: #3b4468;
+                          padding-left: 5px;
                           &::before {
-                            content: "";
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            height: 100%;
                             width: 4px;
-                            background-color: #ffa477;
+                            transition: width .2s;
                           }
+                        }
+                        &::before {
+                          content: "";
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          height: 100%;
+                          width: 0;
+                          background-color: #ffa477;
                         }
                         &:hover {
                           background-color: #3b4468;
-                          li {
-                            color: white;
+                          color: white !important;
+                          i {
+                            color: white !important;
                           }
                         }
                       }

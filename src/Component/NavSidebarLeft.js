@@ -14,7 +14,16 @@ class NavSidebarLeft extends Component{
                 document.getElementsByClassName('tree')[0].classList.toggle('visible')
                 break;
         }
-        
+    }
+    componentDidMount() {
+        $('.nav-content-left li').on('click', function(){
+            $('.nav-content-left li').removeClass('active')
+            $(this).toggleClass('active')
+        })
+        $('.nav-content-left-list li').on('click', function(){
+            // $('.nav-content-left-list li').removeClass('active')
+            $(this).toggleClass('active')
+        })
     }
     render(){
         return(
@@ -27,7 +36,7 @@ class NavSidebarLeft extends Component{
                             Custom Reports
                             </a>
                     </li>
-                    <li className=''>
+                    <li className='active'>
                             <i className='las la-chart-area'></i>
                             <a>
                             Dasboard
@@ -108,7 +117,7 @@ class NavSidebarLeft extends Component{
                             <i className='fa fa-plus'></i>
                         </div>
                     </li>
-                    <li className='active'>
+                    <li className=''>
                         <div className='content' onClick={() => {this.onClickDropdown(2)}}>
                             <i className='las la-folder-open'>
                                 <p>Directory</p>

@@ -5,7 +5,7 @@ class MainContent extends Component{
     constructor(){
         super()
         this.state = {
-            count_card : 20
+            count_card : 15
         }
     }
     onClickContent = () =>{
