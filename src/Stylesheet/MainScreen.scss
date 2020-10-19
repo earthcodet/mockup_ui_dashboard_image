@@ -22,16 +22,20 @@
           }
         }
       }
-      // .main-content div.body-content .col.is-6 div.card div .main-popup .popup-card
-      &.body-content{
-        .col{
-          &.is-6{
+      &.body-content {
+        .col {
+          &.is-6 {
             width: 33.33% !important;
-            div{
+            div {
               &.card {
+                p {
+                  &.heading-card {
+                    padding: 10px 0 !important;
+                  }
+                }
                 div {
                   .main-popup {
-                    .popup-card{
+                    .popup-card {
                       border-top-left-radius: 8px !important;
                       border-top-right-radius: 0px !important;
                       left: -250px !important;
@@ -193,18 +197,26 @@
       }
     }
   }
+  .main-navbar-right {
+    ul {
+      &.nav-right-content {
+        background-color: white !important;
+        li {
+            background-color: rgba(43, 158, 179, 1) !important;
+        }
+      }
+    }
+  }
   .view-screen {
     div {
       &.control {
         left: 60px !important;
+        right: 0px !important;
       }
       &.status {
         left: 100px !important;
       }
     }
-  }
-  .main-content div.body-content .col.is-6 div.card div .main-popup .popup-card{
-    
   }
 }
 //กำหนด size content

@@ -51,7 +51,7 @@ class MainContent extends Component{
                 <div className='col is-6'>
                         <div className='card'>
                             <img src='https://i.pinimg.com/originals/1a/a8/49/1aa8495fe9870bff5ea5a7e663667348.jpg'></img>
-                            <p>Skiing Holiday Part 1</p>
+                            <p className='heading-card'>Skiing Holiday Part 1</p>
                             <div className=''>
                                 <p>
                                     <i className='las la-heart' onClick={() => this.likeImage(item)}></i>

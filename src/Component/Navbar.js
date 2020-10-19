@@ -20,17 +20,28 @@ class Navbar extends Component {
        }
     }
     onClickControlNavRight = (kw) =>{
-        if(kw === undefined){
-            $('.main-navbar-right').toggleClass('hide')
-            $('.main-content').toggleClass('hide-menu')
-            $('.control').toggleClass('hide-menu')
-        }else{
-            if(!$('.main-navbar-right').hasClass('hide')){
+        if(window.innerWidth > 1024){
+            if(kw === undefined){
                 $('.main-navbar-right').toggleClass('hide')
                 $('.main-content').toggleClass('hide-menu')
                 $('.control').toggleClass('hide-menu')
+            }else{
+                if(!$('.main-navbar-right').hasClass('hide')){
+                    $('.main-navbar-right').toggleClass('hide')
+                    $('.main-content').toggleClass('hide-menu')
+                    $('.control').toggleClass('hide-menu')
+                }
+            }
+        }else{
+            if(kw === undefined){
+                $('.main-navbar-right').toggleClass('hide')
+            }else{
+                if(!$('.main-navbar-right').hasClass('hide')){
+                    $('.main-navbar-right').toggleClass('hide')
+                }
             }
         }
+        
         
     }
     render() {
