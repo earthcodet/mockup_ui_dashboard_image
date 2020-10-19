@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import '../StyleSheet/ViewScreen.scss'
 import $ from 'jquery';
+import ReactEcharts from 'echarts-for-react';
 class ViewScreen extends Component {
     constructor(){
         super()
@@ -58,6 +59,40 @@ class ViewScreen extends Component {
         })
         this.nextImage(1)
     }
+    createEchart = () => {
+        let option = {
+            grid:{
+                width:'100%',
+                height:'100%',
+                x:0,
+                y2:0
+            },
+             xAxis: {
+                 type: 'category',
+                show:false
+             },
+             yAxis: {
+                 type: 'value',
+                   show:false,
+             },
+            series: [{
+                   name: 'Series-1',
+                   type: 'bar',
+                   stack: '1',
+                   data: [2, 2, 2, 2,],
+                   color:'#baf7ff'
+               },
+               {
+                   name: 'Series-3',
+                   type: 'bar',
+                   stack: '1',
+                   data: [1, 2, 3, 5],
+                   color:'#8cc8d3'
+               }
+              ]
+         };
+             return option        
+     }
     nextImage = (index) => {
         if(index === 1){
             $('.control-video').toggleClass('active')
@@ -72,17 +107,35 @@ class ViewScreen extends Component {
         return (
             <div className='view-screen'>
                <div className='status'> 
-                   87%
+                    <div>
+                         <p className='heading-screen'>
+                             <span>
+                                87
+                             </span>
+                             <span>
+                                 %
+                             </span>
+                         </p>
+                    </div>
+                    <div>
+                        <p className='subheading-screen'>
+                                <span><ReactEcharts option={this.createEchart()} className='box-chart' /></span>
+                                <span>Weekly Likes</span>
+                        </p>
+                            
+                    </div>
                </div>
                <input className='carousel__activator' id='carousel-slide-activator-1' name='carousel' type='radio'  checked></input >
                         <input className='carousel__activator' id='carousel-slide-activator-2' name='carousel' type='radio'  ></input >
                         <input className='carousel__activator' id='carousel-slide-activator-3' name='carousel' type='radio'  ></input >
                         <input className='carousel__activator' id='carousel-slide-activator-4' name='carousel' type='radio'  ></input >
                         <input className='carousel__activator' id='carousel-slide-activator-5' name='carousel' type='radio'  ></input >
+               
                <div className='body-screen'>
                     <div className='item'>
                         {/* controls */}
-                    {/* <video  src='https://r5---sn-w5nuxa-c33lz.googlevideo.com/videoplayback?expire=1602691792&ei=cM6GX_qMH6miz7sP4N6roAM&ip=183.88.213.241&id=o-AMhJPUzdbFvXUDOlvpiril1CSGQW8ftO9TEmk6YxFG4y&itag=247&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313&source=youtube&requiressl=yes&mh=UW&mm=31%2C26&mn=sn-w5nuxa-c33lz%2Csn-npoeen7r&ms=au%2Conr&mv=m&mvi=5&pcm2cms=yes&pl=23&initcwndbps=867500&vprv=1&mime=video%2Fwebm&gir=yes&clen=186935847&dur=1574.573&lmt=1566530293521931&mt=1602670010&fvip=5&keepalive=yes&fexp=23915654&beids=9466585&c=WEB&txp=5531432&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRAIgSMDdRZxH0rVtPcYHI-6pmlq3KZBYLGOPBJM0jTlwKp4CIEzfzF1FoutxQwZAlqooCsBOJ5mZxbr7K4d8zAvpuCeO&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIhAMDlPDJLM69wXtJmPz167vlJQPnhu04_UbZijvk2zmW1AiASlyNDRCYysZcpcQZEVC3vuJ_E-2GL86REgurYMY4HgA%3D%3D&alr=yes&cpn=JudqLpS3Q-7ZNIGY&cver=2.20201013.02.02&rn=20&altitags=244%2C243' className='video'></video> */}
+                        <img src='https://www.dualmonitorbackgrounds.com/albums/Sterling9192/mountain-wallpaper-oil-paint.png'></img>
+                        {/* <video></video> */}
                     <video src='https://r3---sn-w5nuxa-c33le.googlevideo.com/videoplayback?expire=1602835715&ei=owCJX7XfH-aAjuMPv6e46Ag&ip=183.88.213.241&id=o-AKrC0YRu1Lk_As0_Bmmx7bvuYSN_CWGYMHXxT_XjDC0s&itag=248&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313%2C394%2C395%2C396%2C397%2C398%2C399&source=youtube&requiressl=yes&mh=4h&mm=31%2C26&mn=sn-w5nuxa-c33le%2Csn-npoeenek&ms=au%2Conr&mv=m&mvi=3&pcm2cms=yes&pl=23&initcwndbps=1348750&vprv=1&mime=video%2Fwebm&gir=yes&clen=89950932&dur=306.080&lmt=1578943564864855&mt=1602813988&fvip=3&keepalive=yes&fexp=23915654&beids=9466585&c=WEB&txp=5531432&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhALAM2QawKcySM-74xjDq81K7lBYp7RbHbPj5yIhdXbaGAiEAlYg5TC1CnJQC1R2NkvGHQnU17-dO9A6t2P_3vQgiDks%3D&alr=yes&sig=AOq0QJ8wRQIhANtgYvL-Ki9EAkn1YqQ1QPefY188yC1MuVy8BUo67ySGAiA0EKvJoK9PNOypS3hKHCtjkdw35aFXWtfB_KBW5Nw5Eg%3D%3D&cpn=7RHXjDNJjQArMjmC&cver=2.20201015.02.00&rn=1' className='video'/>
                     </div>
                     <div className='item'>

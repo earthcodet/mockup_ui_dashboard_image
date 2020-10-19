@@ -10,10 +10,44 @@
   position: relative;
   div {
     &.status {
+      display: flex;
       position: absolute;
       top: 20%;
-      left: 16%;
-      color: black;
+      left: 250px;
+      color: white;
+      z-index: 5;
+      div {
+       
+        p {
+          &.heading-screen{
+            font-weight: 300;
+            margin-right: 10px;
+            span{
+              &:nth-child(1){
+                font-size: 40px;
+              }
+              &:nth-child(2){
+                font-size: 15px;
+              }
+            }
+          }
+          &.subheading-screen {
+            font-size: 13px;
+            letter-spacing: 1px;
+            span {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        
+        }
+
+        .box-chart {
+          width: 90% !important;
+          height: 30px !important;
+        }
+      }
     }
     &.body-screen {
       //   overflow: auto !important;
@@ -23,15 +57,15 @@
       transition: all 0.3s ease 0s;
       div {
         &.item {
-          img{
+          img {
             width: 100vw;
             height: 405px;
           }
           video {
             cursor: pointer;
-           width: 100vw;
-           height: 100% ;
-           object-fit: fill;
+            width: 100vw;
+            height: 100%;
+            object-fit: fill;
           }
         }
       }
@@ -47,15 +81,18 @@
       justify-content: space-between;
       padding: 0 20px;
       background-color: rgba(44, 111, 140, 0.7);
+      &.hide-menu{
+        right: 0;
+      }
       div {
         display: flex;
         align-items: center;
-        i{
+        i {
           cursor: pointer;
           font-size: 11px;
           font-weight: 600;
           opacity: 0.9;
-          &:hover{
+          &:hover {
             opacity: 1;
           }
         }
@@ -67,7 +104,7 @@
             border: none;
             background: #f18354;
             outline: none;
-            opacity: .9;
+            opacity: 0.9;
             -webkit-transition: 0.2s;
             transition: opacity 0.2s;
             -webkit-appearance: none;
@@ -90,7 +127,6 @@
               cursor: pointer;
             }
           }
-          
         }
         ul {
           list-style: none;
@@ -115,11 +151,11 @@
             }
           }
         }
-        &.control-video{
+        &.control-video {
           visibility: hidden;
-          &.active{
+          &.active {
             visibility: visible;
-            transition: all .5s;
+            transition: all 0.5s;
           }
         }
       }

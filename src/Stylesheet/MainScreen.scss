@@ -1,9 +1,228 @@
-.app-main{
-    background-color: #f0f5f9;
-    height: 100%;
-    overflow: hidden;
-    .app-content{
-        // width: 2000px;
-       
+.app-main {
+  background-color: #f0f5f9;
+  height: 100%;
+  overflow: hidden;
+}
+//แทบเล็ต
+@media screen and (max-width: 1024px) {
+  .main-content{
+    margin: 0 0 0 60px !important;
+  }
+  .main-nav-left{
+    *{
+      cursor: default !important;
+    }
+    height: 100vh;
+    width: 60px !important;
+    a,p{
+      display: none;
+    }
+    ul{
+
+      &.nav-content-left{
+        height: auto !important;
+        li{
+          padding:17px 17px !important;
+        }
+      }
+    }
+    div{
+      &.status{
+        height: auto !important;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .status-box{
+         width: 100% !important;
+         display: flex;
+         align-items: flex-start;
+         justify-content: flex-start;
+          .process{
+            width: 30px !important;
+            height: 30px !important;
+            border-width: 3px !important;
+            p{
+              display:block;
+              font-size: 10px !important;
+            }
+          }
+        }
+      }
+      &.content{
+        padding:17px 17px !important;
+        i{
+          &:nth-child(2){
+            display: none !important; 
+          }
+        }
+        p{
+          &:nth-child(1){
+            display: none;
+          }
+          &:nth-child(2){
+            margin-left: 7px !important;
+            display: block !important;
+          }
+        }
+      }
+    }
+    li{
+      &.notification-box{
+        display: flex;
+        // align-items: flex-start !important;
+        div{
+          &.notification{
+            width: 2px !important;
+            height: 8px !important;
+            background-color: red !important;
+         }
+        }
+      }
+    }
+    ul {
+      &.dropdown-list {
+        &.visible {
+          padding: 0 0 0 43px !important;
+        }
+      }
+    }
+  &:hover{
+    width: 220px !important;
+    transition: all .2s;
+    a,p{
+      display: block !important;
+    }
+    div{
+      &.status{
+        height: auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 5px 0 !important;
+        .status-box{
+          // color: white !important;
+          width: 50% !important;
+          display: flex !important;
+          flex-wrap: wrap !important;
+          align-items: center !important;
+          justify-content: center !important;
+          margin: 0px !important;
+          .process{
+            width: 70px !important;
+            height: 70px !important;
+            border-width: 5.5px !important;
+            p{
+              display:block;
+              font-size: 24px !important;
+            }
+          }
+        }
+      }
+      &.content{
+        padding:17px 17px !important;
+        i{
+          &:nth-child(2){
+            display: block !important; 
+          }
+        }
+        p{
+          &:nth-child(1){
+            display: block;
+          }
+          &:nth-child(2){
+            margin-left: 7px !important;
+            display: none !important;
+          }
+        }
+      }
+    }
+    li{
+      &.notification-box{
+        position: relative;
+        display: block;
+        div{
+          &.notification{
+            width: 35px !important;
+            height: 25px !important;
+            background-color:  #3692a9 !important;
+         }
+        }
+      }
+    }
+    ul {
+      &.dropdown-list {
+        &.visible {
+          padding: 0 0 0 40px !important;
+        }
+      }
+    }
+  }
+}
+}
+//กำหนด size content
+@media screen and (min-width: 2500px) {
+  .app-main {
+    .app-content {
+      width: 2000px;
+      div {
+        &.view-screen {
+          div {
+            &.control {
+              width: 2000px !important;
+              right: initial;
+              left: 0;
+            }
+            &.status {
+              left: 2%;
+            }
+          }
+        }
+        &.main-content {
+          margin: 0 !important;
+          div {
+            &.body-content {
+              padding: 0;
+              div {
+                &.is-6 {
+                  padding: 0 40px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .main-nav-left {
+      div {
+        &.m-color {
+            background-color: #2a4065 !important;
+          ul {
+            li {
+              &:nth-child(1) {
+                background-color: #2a4065 !important;
+              }
+              &:nth-child(2) {
+                background-color: #334f7d !important;
+              }
+              &:nth-child(3) {
+                background-color: #304b79 !important;
+              }
+              &:nth-child(4) {
+                background-color: #375280 !important;
+              }
+              &:nth-child(5) {
+                background-color: #2e4773 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//ขยาย nav
+@media screen and (min-width:3000px) {
+    .main-nav-left,.main-navbar-right{
+        width: 350px !important;
     }
 }

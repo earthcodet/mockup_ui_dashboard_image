@@ -4,8 +4,6 @@ import '../StyleSheet/MainScreen.scss'
 import '../StyleSheet/Main.scss'
 import MainContent from './MainContent'
 import Navbars from './Navbar'
-import NavSidebarLeft from './NavSidebarLeft'
-import NavSidebarRight from './NavSidebarRight'
 import ViewScreen from './ViewScreen'
 class MainScreen extends Component {
     render(){
@@ -20,8 +18,7 @@ class MainScreen extends Component {
 
                 {/* extension */}
                 <Navbars />
-                <NavSidebarLeft />
-                <NavSidebarRight />
+              
             </div>
         )
     }

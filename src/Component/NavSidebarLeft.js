@@ -88,6 +88,7 @@ class NavSidebarLeft extends Component{
                     <li>
                         <div className='content'>
                             <p>my account</p>
+                            <p className='headding-nobile'>A</p>
                         </div>
                     </li>
                     <li>

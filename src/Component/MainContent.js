@@ -101,7 +101,7 @@ class MainContent extends Component{
     }
     render() {
         return (
-            <div className='main-content'>
+            <div className='main-content '>
                <div className='heading-content' > 
                    <p onClick={() => this.onClickContent()}>
                        <i className= 'fas fa-caret-down icon-content'></i>
