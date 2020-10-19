@@ -48,6 +48,7 @@ class Navbar extends Component {
         return (
             <div >
                 <div className='navbar'>
+                    <div className='heading-mobile'></div>
                     <div className='nav-logo'>
                         <p>
                             photolytics
