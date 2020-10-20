@@ -99,6 +99,9 @@ class MainContent extends Component{
         }
         return row
     }
+    openSortTable = () =>{
+        $('.category').toggleClass('show-popup')
+    }
     render() {
         return (
             <div className='main-content '>
@@ -107,44 +110,46 @@ class MainContent extends Component{
                        <i className= 'fas fa-caret-down icon-content'></i>
                         portfolio
                    </p>
+                 
                    <ul className='category'>
                        <li>
                             <p>Date</p>
                             <div>
-                                Sort by date
+                                <span>Sort by date</span> 
                                 <img src='https://i.ibb.co/4ShDL3L/Blank-diagram-1.png'></img>
                             </div>
                        </li>
                        <li>
                             <p>Likes</p>
                             <div>
-                                Sort by likes
+                                <span>Sort by likes</span> 
                                 <img src='https://i.ibb.co/4ShDL3L/Blank-diagram-1.png'></img>
                             </div>
                        </li>
                        <li className='active'>
                             <p>Views</p>
                             <div>
-                                Sort by views
+                                <span>Sort by views</span> 
                                 <img src='https://i.ibb.co/4ShDL3L/Blank-diagram-1.png'></img>
                             </div>
                        </li>
                        <li>
                             <p>Comments</p>
                             <div>
-                                Sort by comments
+                                <span>Sort by comments</span> 
                                 <img src='https://i.ibb.co/4ShDL3L/Blank-diagram-1.png'></img>
                             </div>
                        </li >
                        <li>
                             <p>Shared</p>
                             <div>
-                                Sort by shared
+                                <span>Sort by shared</span> 
                                 <img src='https://i.ibb.co/4ShDL3L/Blank-diagram-1.png'></img>
                             </div>
                        </li>
                    </ul>
-               </div>
+                   <div className='menu-mobile las la-sort-amount-down' onClick={() => this.openSortTable()}></div>
+              </div>
                <div className='body-content cols'>
                     {this.createCard()}
                </div>

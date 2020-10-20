@@ -133,10 +133,8 @@ class ViewScreen extends Component {
                
                <div className='body-screen'>
                     <div className='item'>
-                        {/* controls */}
-                        {/* <img src='https://www.dualmonitorbackgrounds.com/albums/Sterling9192/mountain-wallpaper-oil-paint.png'></img> */}
-                        {/* <video></video> */}
-                    <video src='https://r2---sn-a5meknsy.googlevideo.com/videoplayback?expire=1603098269&ei=PAKNX-3rPM6twgPd5aSACg&ip=183.88.213.241&id=o-ABkCHe7JmQ5QHeCJ1MlnGSZQIRhPqzb7AnwV63SHSGtp&itag=248&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C272%2C278%2C313&source=youtube&requiressl=yes&vprv=1&mime=video%2Fwebm&gir=yes&clen=72349058&dur=297.797&lmt=1541119361958927&fvip=2&keepalive=yes&fexp=9466585,23910289,23915654&beids=9466585&c=WEB&txp=2301222&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&alr=yes&sig=AOq0QJ8wRQIgNRaX9mQKECJfC4XLKRsYQj_f-qkcJQqGdRjwO6e7JDwCIQDlIxcXUeczvoJkBGnaP1covnbGL-mAuz6tD9uNnSQAWg%3D%3D&cpn=OfTO9JOd3WVGpmF3&cver=2.20201016.02.00&cm2rm=sn-w5nuxa-c33ls7l,sn-30als7l&rn=9&redirect_counter=3&rm=sn-npoly7e&req_id=e628fd139af7a3ee&cms_redirect=yes&mh=KY&mm=39&mn=sn-a5meknsy&ms=ltr&mt=1603076261&mv=u&mvi=2&pl=23&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIhAIZ5ZYRh7li8O4G96tNYAf-FCV9AK_kqSXvb01EqlW27AiAzcrfdWY1ztkqxiASQKpdB2s0muW5JBypyEyMWeQ_zeg%3D%3D' className='video'/>
+                    <video src='https://vod-progressive.akamaized.net/exp=1603163738~acl=%2A%2F1313003841.mp4%2A~hmac=906f90910b8a7396f24ae26d3e8fb13b47d2662a7ef3b2af73ccb11e54ec3ed1/vimeo-prod-skyfire-std-us/01/1625/13/333126801/1313003841.mp4' className='video'/>
+                   
                     </div>
                     <div className='item'>
                         <img src='https://www.dualmonitorbackgrounds.com/albums/Sterling9192/mountain-wallpaper-oil-paint.png'></img>

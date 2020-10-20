@@ -10,7 +10,7 @@ class MainScreen extends Component {
         return(
             <div className='app-main'>
                 {/* main */}
-                <div className='app-content'>
+                <div className='app-content show-b'>
                     <ViewScreen />
                     <MainContent />
                 </div>

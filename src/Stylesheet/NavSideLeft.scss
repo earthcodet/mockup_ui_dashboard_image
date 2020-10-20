@@ -13,17 +13,20 @@
   left: 0;
   bottom: 0px;
   width: 220px;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 405px, #2c3144 20%); /* Standard syntax (must be last) */
-  ul{
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 405px,
+    #2c3144 20%
+  ); /* Standard syntax (must be last) */
+  ul {
     padding-inline-start: 0;
     margin-block-start: 0;
     margin-block-end: 0;
   }
-  div{
-    
-    &.m-color{
+  div {
+    &.m-color {
       width: 100%;
-      background-color: rgba(42,64,101,.59);
+      background-color: rgba(42, 64, 101, 0.59);
       ul {
         &.nav-content-left {
           height: 225px;
@@ -35,26 +38,26 @@
             align-items: center;
             transition: background 0.8s;
             &:nth-child(1) {
-            background-color: rgba(42,64,101,1)
+              background-color: rgba(42, 64, 101, 1);
             }
             &:nth-child(2) {
-              background-color: rgba(42,64,101,.8)
+              background-color: rgba(42, 64, 101, 0.8);
             }
             &:nth-child(3) {
-              background-color: rgba(42,64,101,.7)
+              background-color: rgba(42, 64, 101, 0.7);
             }
             &:nth-child(4) {
-              background-color: rgba(42,64,101,.6)
+              background-color: rgba(42, 64, 101, 0.6);
             }
             &.active {
               background-color: #2b4a71;
               color: white;
               position: relative;
               padding-left: 22px;
-            
+
               &::before {
                 width: 5px;
-                transition: all .3s;
+                transition: all 0.3s;
               }
             }
             &::before {
@@ -107,15 +110,14 @@
         }
       }
     }
-    &.h-color{
+    &.h-color {
       height: auto;
       width: 100%;
       background-color: rgba(44, 49, 68, 1);
-      ul{
+      ul {
         &.nav-content-left-list {
           list-style: none;
           color: white;
-          
           height: auto;
           li {
             position: relative;
@@ -128,9 +130,15 @@
                 background-color: #333a54;
                 justify-content: space-between;
                 text-align: left;
-                p{
-                  &:nth-child(2){
+                p {
+                  &:nth-child(2) {
                     display: none;
+                  }
+                }
+                i {
+                  &:nth-child(2) {
+                    transition: rotate(180deg);
+                    transition: transform 0.2s;
                   }
                 }
               }
@@ -143,7 +151,7 @@
                 padding: 0;
                 visibility: hidden;
                 list-style: none;
-      
+
                 // margin-top:17px;
                 // margin-bottom:17px;
                 li {
@@ -175,7 +183,7 @@
                       opacity: 1;
                     }
                   }
-                 
+
                   &::before {
                     height: 140%;
                   }
@@ -198,7 +206,7 @@
                 visibility: hidden;
                 list-style: none;
                 transition: padding 300ms;
-                li{
+                li {
                   height: 0;
                 }
                 &.visible {
@@ -377,12 +385,12 @@
                 opacity: 0.6;
               }
             }
-    
+
             &.active,
             &:hover {
-              color: white ;
-              li{
-                i{
+              color: white;
+              li {
+                i {
                   opacity: 1;
                 }
               }
@@ -390,7 +398,7 @@
                 &.content {
                   background-color: #3b4461;
                   opacity: 1;
-                  p{
+                  p {
                     color: white;
                     opacity: 1;
                   }
@@ -403,12 +411,23 @@
                 }
               }
             }
+            &.active {
+              div {
+                &.content {
+                  i {
+                    &:nth-child(2) {
+                      transform: rotate(90deg);
+                      transition: 0.2s;
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
     }
   }
- 
   .status {
     height: 180px;
     // padding: 20px 0;
@@ -459,5 +478,4 @@
       }
     }
   }
-
 }

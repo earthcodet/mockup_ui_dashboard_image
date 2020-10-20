@@ -3,7 +3,7 @@
   overflow-y: auto;
   position: fixed;
   top: 45px;
-  right: 7px;
+  right: 0px;
   height: 100%;
   bottom: 0px;
   width: 250px; 
@@ -323,7 +323,7 @@
   }
   &.hide{
     width: 0;
-    height: 0;
+    // height: 0;
     transition: width .2s linear
   }
 }
