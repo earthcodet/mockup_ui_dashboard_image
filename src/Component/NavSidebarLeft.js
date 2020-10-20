@@ -3,16 +3,20 @@ import "../StyleSheet/NavSideLeft.scss";
 import $ from "jquery";
 class NavSidebarLeft extends Component {
   onClickDropdown = (n) => {
+    console.log(`n = ${n}`)
+    console.log(document.getElementsByClassName("nav-content-left-list")[0].children)
+    document.getElementsByClassName("nav-content-left-list")[0].children[n].classList.toggle("active-icon");
+    console.log(document.getElementsByClassName("nav-content-left-list")[0].children)
     switch (n) {
-      case 0:
-        document
-          .getElementsByClassName("dropdown-list")
-          [n].classList.toggle("visible");
-        break;
       case 1:
         document
           .getElementsByClassName("dropdown-list")
-          [n].classList.toggle("visible");
+          [0].classList.toggle("visible");
+        break;
+      case 4:
+        document
+          .getElementsByClassName("dropdown-list")
+          [1].classList.toggle("visible");
         break;
       default:
         document.getElementsByClassName("tree")[0].classList.toggle("visible");
@@ -25,7 +29,6 @@ class NavSidebarLeft extends Component {
       $(this).toggleClass("active");
     });
     $(".nav-content-left-list li").on("click", function () {
-      // $('.nav-content-left-list li').removeClass('active')
       $(this).toggleClass("active");
     });
   }
@@ -85,7 +88,7 @@ class NavSidebarLeft extends Component {
               <div
                 className="content"
                 onClick={() => {
-                  this.onClickDropdown(0);
+                  this.onClickDropdown(1);
                 }}
               >
                 <i className="las la-file-upload">
@@ -116,7 +119,7 @@ class NavSidebarLeft extends Component {
               <div
                 className="content"
                 onClick={() => {
-                  this.onClickDropdown(2);
+                  this.onClickDropdown(3);
                 }}
               >
                 <i className="las la-folder-open">
@@ -139,7 +142,9 @@ class NavSidebarLeft extends Component {
                       </label>
                       <ul>
                         <li>
-                            <span class="tree_label las la-file-alt ">misc.mp4</span>
+                          <span class="tree_label las la-file-alt ">
+                            misc.mp4
+                          </span>
                         </li>
                       </ul>
                     </li>
@@ -231,7 +236,7 @@ class NavSidebarLeft extends Component {
                 <li>
                   <input type="checkbox" id="c7" />
                   <label class="tree_label hg" for="c7">
-                  <i className="las la-hdd"></i>
+                    <i className="las la-hdd"></i>
                     Hard Drive
                   </label>
                   <ul>
@@ -339,7 +344,7 @@ class NavSidebarLeft extends Component {
               <div
                 className="content"
                 onClick={() => {
-                  this.onClickDropdown(1);
+                  this.onClickDropdown(4);
                 }}
               >
                 <i className="lab la-buffer">
