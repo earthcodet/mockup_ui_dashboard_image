@@ -231,6 +231,7 @@ class NavSidebarLeft extends Component {
                 <li>
                   <input type="checkbox" id="c7" />
                   <label class="tree_label hg" for="c7">
+                  <i className="las la-hdd"></i>
                     Hard Drive
                   </label>
                   <ul>

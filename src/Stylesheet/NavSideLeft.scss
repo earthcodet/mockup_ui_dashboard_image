@@ -202,7 +202,7 @@
                 visibility: hidden;
                 list-style: none;
                 transition: padding 300ms;
-                i{
+                i {
                   margin-right: 5px;
                   font-size: 20px;
                 }
@@ -248,14 +248,18 @@
                   &:checked:nth-child(1) ~ ul {
                     display: block !important;
                   }
-                  &:checked ~ label{
-                    &.tree_label{
+                  &:checked ~ label {
+                    &.tree_label {
                       &::before {
+                        color: #fff;
                         content: "\f0d7";
                         font-family: "Font Awesome 5 Free";
                         font-weight: 900;
                         width: 1em;
                         height: 96%;
+                      }
+                      &.hg{
+                        color: #ffff;
                       }
                     }
                   }
@@ -287,7 +291,7 @@
                 }
                 ul {
                   li {
-                    padding: 1em 0 0 1em ;
+                    padding: 1em 0 0 1em;
                     list-style: none;
                   }
                 }
@@ -310,9 +314,6 @@
                     li {
                       .tree_label {
                         position: relative;
-                        // display: inline-block;
-                        // font-family: initial;
-                        // font-size: 20px;
                         font-weight: 400;
                         display: flex;
                         align-items: center;
@@ -330,12 +331,15 @@
                         }
                       }
                       &:nth-last-child(1) {
-                        .tree_label {
-                          &::after {
-                            border-left: 2px dotted #777;
-                            top: -29px;
-                            left: -2.56em;
-                            height: 2.5em;
+                        label {
+                          &.tree_label {
+                            &::after {
+                              border-left: 2px dotted #777;
+                              top: -29px;
+                              left: -2.56em;
+                              height: 2.5em;
+                              width: 0.8em;
+                            }
                           }
                         }
                         &::after {
@@ -375,13 +379,13 @@
                               border-radius: 0 0 0 0.3em;
                               content: "";
                             }
-                            &::before{
+                            &::before {
                               position: relative;
                               margin-right: 5px;
                               // content: '';
                               font-size: 20px;
-                              font-weight: 900; 
-                              font-family: 'Line Awesome Free';
+                              font-weight: 900;
+                              font-family: "Line Awesome Free";
                             }
                           }
                           &:nth-last-child(1) {
@@ -439,7 +443,7 @@
                 label {
                   &.tree_label {
                     &::before {
-                      color: #fff;
+                      color: #777;
                       position: relative;
                       z-index: 1;
                       float: left;
@@ -452,6 +456,7 @@
                       font-family: "Font Awesome 5 Free";
                       font-weight: 900;
                     }
+                    color:#777
                   }
                   &.hg {
                     &::before {

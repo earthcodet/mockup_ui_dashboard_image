@@ -57,6 +57,10 @@
           &.box-chart {
             width: 70%;
             height: 36.67px !important;
+            &.map{
+              width: 50%;
+              height: 58px !important;
+            }
           }
           &.content-box {
             margin: 0 15px;

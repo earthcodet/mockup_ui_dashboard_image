@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../StyleSheet/MainContent.scss'
 import $ from 'jquery';
+
 class MainContent extends Component{
     constructor(){
         super()
