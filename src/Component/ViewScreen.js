@@ -133,8 +133,8 @@ class ViewScreen extends Component {
                
                <div className='body-screen'>
                     <div className='item'>
-                    <video src='https://vod-progressive.akamaized.net/exp=1603163738~acl=%2A%2F1313003841.mp4%2A~hmac=906f90910b8a7396f24ae26d3e8fb13b47d2662a7ef3b2af73ccb11e54ec3ed1/vimeo-prod-skyfire-std-us/01/1625/13/333126801/1313003841.mp4' className='video'/>
-                   
+                    {/* <video src='https://vod-progressive.akamaized.net/exp=1603163738~acl=%2A%2F1313003841.mp4%2A~hmac=906f90910b8a7396f24ae26d3e8fb13b47d2662a7ef3b2af73ccb11e54ec3ed1/vimeo-prod-skyfire-std-us/01/1625/13/333126801/1313003841.mp4' className='video'/> */}
+                    <video className='video' src={require('../Video/video_display.webm')}></video>
                     </div>
                     <div className='item'>
                         <img src='https://www.dualmonitorbackgrounds.com/albums/Sterling9192/mountain-wallpaper-oil-paint.png'></img>
