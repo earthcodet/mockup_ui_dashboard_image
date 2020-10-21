@@ -1,11 +1,12 @@
+@import '../StyleSheet/Main.scss';
 // animetion
 @keyframes effect_dylan {
   50% {
-    transform: scale(1.5, 1.5);
+    transform: scale(1, 1);
     opacity: 1;
   }
   99% {
-    transform: scale(0.5, 0.5);
+    transform: scale(1.5, 1.5);
     opacity: 1;
   }
   100% {
@@ -19,7 +20,6 @@
     transform: scale(2.5);
   }
 }
-
 .main-content {
   height: 100%;
   margin: 0 233px 0 220px;
@@ -111,7 +111,9 @@
               border: 3px solid #cadbe5;
               position: absolute;
               top: -6px;
-              left: 35px;
+              // left: 35px;
+              left: calc(50% - 7px);
+              // transform:translate(-50%,0%);
               transition: all 0.4s ease-in;
             }
             &:hover {
@@ -124,7 +126,7 @@
                 visibility: visible;
                 position: absolute;
                 top: -320%;
-                left: -20%;
+                left:calc(0% - 15px);
                 background-color: #333a54;
                 width: 120px;
                 height: auto;
@@ -133,6 +135,7 @@
                 color: white;
                 padding: 10px 0 0 0;
                 border-radius: 4px;
+                // transform: translate(0%,-4%);
                 &::after {
                   content: "";
                   position: absolute;
@@ -181,7 +184,9 @@
                 height: 170px;
               }
               .heading-card{
+                color: #706f73;
                 padding: 10px 0;
+                @include font-body-web
               }
               div {
                 height: 27px;
@@ -214,6 +219,10 @@
                   font-size: 17px;
                   font-weight: 500;
                   color: #28869f;
+                  span{
+                    @include font-number;
+                    font-weight: 800;
+                  }
                 }
                 .main-popup {
                   display: flex;

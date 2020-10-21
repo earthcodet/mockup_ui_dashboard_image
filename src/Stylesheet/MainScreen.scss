@@ -1,20 +1,9 @@
+@import "../StyleSheet/Main.scss";
 .app-main {
   background-color: #f0f5f9;
   height: 100%;
   overflow: hidden;
-  .app-content{
-    &.show-b{
-      // position: fixed;
-      // top: 0;
-      // left: 0;
-      // width: 100%;
-      // height: 100%;
-      // background-color: red;
-      // z-index: 101;
-    }
-  }
 }
-
 //แทบเล็ต
 @media only screen and (max-width: 1024px) {
   * {
@@ -25,10 +14,11 @@
     div {
       &.heading-content {
         ul {
+          width: 60% !important;
           li {
             &:hover {
               div {
-                left: -24% !important;
+                left: calc(0% - 19px) !important;
               }
             }
           }
@@ -481,6 +471,7 @@
     .heading-content {
       position: relative;
       ul {
+        visibility: hidden !important;
         &::before {
           content: "Sort";
           color: white;
@@ -500,7 +491,7 @@
 
         width: 0 !important;
         height: 0 !important;
-        visibility: hidden !important;
+
         opacity: 1 !important;
         position: absolute;
         top: 50px;
@@ -510,7 +501,8 @@
         box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
         flex-wrap: wrap;
         padding: 10px 0;
-        *{
+        * {
+          visibility: hidden !important;
           white-space: nowrap;
         }
         li {
@@ -576,8 +568,10 @@
           width: 50vw !important;
           height: auto !important;
           visibility: visible !important;
+          * {
+            visibility: visible !important;
+          }
         }
-      
       }
       div {
         &.menu-mobile {
@@ -591,8 +585,8 @@
       &.cols {
         padding-left: 10px !important;
         padding-right: 10px !important;
-        .card{
-          img{
+        .card {
+          img {
             height: 250px !important;
           }
         }
@@ -665,6 +659,9 @@
 @media screen and (min-width: 3000px) {
   .main-nav-left,
   .main-navbar-right {
+    width: 350px !important;
+  }
+  .nav-logo {
     width: 350px !important;
   }
 }

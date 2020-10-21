@@ -56,7 +56,9 @@ class MainContent extends Component{
                             <div className=''>
                                 <p>
                                     <i className='las la-heart' onClick={() => this.likeImage(item)}></i>
-                                    255
+                                    <span>
+                                        255
+                                    </span>
                                 </p>
                                 <div className='main-popup'>
                                   <i className='fa fa-ellipsis-h headding' onClick={() => this.openMenubar(item)}>
