@@ -27,7 +27,6 @@ class Navbar extends Component {
     }
   };
   resizeCheck = () => {
-    console.log(`funciton (${window.innerWidth})`);
     if (window.innerWidth <= 1500) {
       this.onClickControlNavRight("open");
     } else {
@@ -67,11 +66,8 @@ class Navbar extends Component {
       }
     } else {
       if (kw === undefined) {
-        console.log(`fix  -- 1`);
-        $(".main-navbar-right").toggleClass("hide");
       } else {
         if (!$(".main-navbar-right").hasClass("hide")) {
-          console.log(`fix  -- 2`);
           $(".main-navbar-right").toggleClass("hide");
         }
       }
